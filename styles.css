@@ -668,6 +668,72 @@ h2 {
   font-size: 14px;
 }
 
+.contact-section {
+  background: #f8fafc;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 260px;
+  gap: 48px;
+  align-items: center;
+}
+
+.contact-copy {
+  max-width: 760px;
+}
+
+.contact-copy p:last-of-type {
+  margin: 20px 0 0;
+  color: var(--muted);
+  font-size: 17px;
+}
+
+.contact-email {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  margin-top: 28px;
+  padding: 0 18px;
+  color: #ffffff;
+  font-weight: 800;
+  background: #0f172a;
+  border-radius: 8px;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.14);
+}
+
+.contact-email:hover {
+  background: #1e293b;
+}
+
+.wechat-card {
+  width: 100%;
+  margin: 0;
+  padding: 16px 16px 14px;
+  background: #ffffff;
+  border: 1px solid var(--soft);
+  border-radius: 8px;
+  box-shadow: 0 16px 38px rgba(15, 23, 42, 0.08);
+}
+
+.wechat-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  background: #ffffff;
+  border-radius: 6px;
+}
+
+.wechat-card figcaption {
+  margin-top: 12px;
+  color: #475569;
+  font-size: 14px;
+  font-weight: 800;
+  text-align: center;
+}
+
 .site-footer {
   padding: 34px 0;
   background: #080d18;
@@ -718,8 +784,13 @@ h2 {
   .product-card,
   .featured-product,
   .showcase-grid,
-  .delivery-grid {
+  .delivery-grid,
+  .contact-grid {
     grid-template-columns: 1fr;
+  }
+
+  .wechat-card {
+    max-width: 260px;
   }
 
   .architecture-flow {
