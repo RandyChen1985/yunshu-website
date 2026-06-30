@@ -2,7 +2,9 @@
 
 云枢（Yunshu Suite）产品矩阵的静态展示站点，介绍从数据治理、智能体执行到 Agent 运营的三层产品体系。
 
-**在线仓库：** [github.com/RandyChen1985/yunshu-website](https://github.com/RandyChen1985/yunshu-website)
+**在线访问：** [randychen1985.github.io/yunshu](https://randychen1985.github.io/yunshu/)
+
+**代码仓库：** [github.com/RandyChen1985/yunshu](https://github.com/RandyChen1985/yunshu)
 
 ## 产品矩阵
 
