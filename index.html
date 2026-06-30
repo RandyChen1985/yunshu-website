@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="云枢产品矩阵：企业级数据服务平台、AI 智能体编排平台与 OpenClaw Buddy 管理伴侣。"
+    />
+    <title>云枢产品矩阵 | Data, Agents, Operations</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <a class="brand" href="#top" aria-label="回到首页">
+        <span class="brand-mark">Y</span>
+        <span>
+          <strong>云枢产品矩阵</strong>
+          <small>Yunshu Suite</small>
+        </span>
+      </a>
+      <nav class="desktop-nav" aria-label="主导航">
+        <a href="#products">产品</a>
+        <a href="#architecture">架构</a>
+        <a href="#scenarios">场景</a>
+        <a href="#delivery">交付</a>
+      </nav>
+      <a class="header-action" href="#products">查看矩阵</a>
+      <button class="menu-button" type="button" data-menu-button aria-label="打开菜单">
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+
+    <nav class="mobile-nav" data-mobile-nav aria-label="移动导航">
+      <a href="#products">产品</a>
+      <a href="#architecture">架构</a>
+      <a href="#scenarios">场景</a>
+      <a href="#delivery">交付</a>
+    </nav>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-media" aria-hidden="true">
+          <img src="assets/images/generated-product-suite-hero.png" alt="" />
+          <img src="assets/images/data-platform-overview.png" alt="" />
+          <img src="assets/images/generated-openclaw-buddy.png" alt="" />
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Enterprise Data & Agent Platform</p>
+          <h1 id="hero-title">云枢产品矩阵</h1>
+          <p class="hero-lead">
+            以数据服务平台作为治理底座，以智能体平台承接推理、工具与业务执行，再用
+            OpenClaw Buddy 降低多渠道 AI Agent 的运营门槛。
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#architecture">了解体系</a>
+            <a class="button secondary" href="#products">浏览产品</a>
+          </div>
+          <div class="hero-metrics" aria-label="产品矩阵摘要">
+            <a class="hero-metric" href="#product-data">
+              <strong>Data API</strong>
+              <span>数据服务化与治理</span>
+            </a>
+            <a class="hero-metric" href="#product-agent">
+              <strong>AI Agent</strong>
+              <span>智能体编排与执行</span>
+            </a>
+            <a class="hero-metric" href="#product-buddy">
+              <strong>Buddy</strong>
+              <span>OpenClaw 可视化伴侣</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section intro-section" aria-label="平台定位">
+        <div class="container intro-grid">
+          <div>
+            <p class="section-kicker">Positioning</p>
+            <h2>把企业数据、AI 执行与运维入口放在同一条产品线上。</h2>
+          </div>
+          <p>
+            这不是三个孤立项目的陈列，而是一条从数据供给到智能执行、再到低门槛管理的产品链路。
+            数据平台负责把物理表、SQL 与 API 资源治理起来；智能体平台负责让 ChatBI、知识库、MCP
+            工具与企业系统协同运行；OpenClaw Buddy 则把开放式 Agent 网关变成非技术人员也能使用的
+            Web 工作台。
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="products" aria-labelledby="products-title">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-kicker">Product Matrix</p>
+            <h2 id="products-title">三层产品，覆盖从数据到智能体运营的完整闭环。</h2>
+          </div>
+
+          <div class="product-grid">
+            <article class="product-card accent-cyan" id="product-data">
+              <div class="product-copy">
+                <p class="product-index">01</p>
+                <h3>云枢 · 数据服务平台</h3>
+                <p>
+                  企业级 Data API 与元数据治理平台，将物理表、自定义 SQL 与语义元数据封装为可审计、
+                  可授权、可观测的 RESTful API。
+                </p>
+                <ul>
+                  <li>TABLE 零代码映射与 SQL 模板封装</li>
+                  <li>SQL Lab、数据产品目录、资产全景</li>
+                  <li>RBAC、审计日志、脱敏与 SQL 护栏</li>
+                </ul>
+                <a
+                  class="product-link"
+                  href="https://github.com/RandyChen1985/yunshu-api-data-platform"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="打开云枢数据服务平台 GitHub 仓库"
+                >
+                  GitHub 仓库
+                  <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+              <figure class="product-shot">
+                <img
+                  src="assets/images/data-platform-overview.png"
+                  alt="云枢数据服务平台仪表盘截图"
+                />
+              </figure>
+            </article>
+
+            <article class="product-card accent-blue featured-product" id="product-agent">
+              <div class="product-copy">
+                <p class="product-index">02</p>
+                <h3>云枢 · 智能体平台</h3>
+                <p>
+                  面向企业复杂场景的 AI 智能中枢，负责智能路由、AgentScope ReAct 执行、ChatBI、
+                  知识库、MCP 工具与嵌入式 Chat SDK。
+                </p>
+                <ul>
+                  <li>多专家路由、@ 提及直选与权限挂起恢复</li>
+                  <li>企业级 ChatBI、SQL 自愈与数据门户</li>
+                  <li>长期记忆、知识库、Trace 与调度中心</li>
+                </ul>
+                <a
+                  class="product-link"
+                  href="https://github.com/RandyChen1985/yunshu-ai-agent-platform"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="打开云枢智能体平台 GitHub 仓库"
+                >
+                  GitHub 仓库
+                  <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+              <figure class="product-shot">
+                <img
+                  src="assets/images/generated-agent-platform.png"
+                  alt="云枢智能体平台高清界面概念图"
+                />
+              </figure>
+            </article>
+
+            <article class="product-card accent-green" id="product-buddy">
+              <div class="product-copy">
+                <p class="product-index">03</p>
+                <h3>OpenClaw Buddy</h3>
+                <p>
+                  为 OpenClaw 打造的零门槛 Web 管理台与对话伴侣，把 Bot、模型、Skills、渠道、
+                  Workspace 文件和 Console 终端放进同一块工作台。
+                </p>
+                <ul>
+                  <li>可视化 Bot、模型、插件与渠道配置</li>
+                  <li>Chat V3：聊天、文件、技能、终端同屏</li>
+                  <li>心跳探针、审计、自愈与飞书告警</li>
+                </ul>
+                <a
+                  class="product-link"
+                  href="https://github.com/RandyChen1985/openclaw-buddy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="打开 OpenClaw Buddy GitHub 仓库"
+                >
+                  GitHub 仓库
+                  <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+              <figure class="product-shot">
+                <img
+                  src="assets/images/generated-openclaw-buddy.png"
+                  alt="OpenClaw Buddy 高清工作台概念图"
+                />
+              </figure>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section architecture-section" id="architecture" aria-labelledby="architecture-title">
+        <div class="container">
+          <div class="section-heading compact">
+            <p class="section-kicker">Architecture</p>
+            <h2 id="architecture-title">一条清晰的企业智能化链路。</h2>
+            <p>
+              底层治理数据，中层封装智能执行，上层面向业务系统、渠道和运营人员提供可控入口。
+            </p>
+          </div>
+
+          <div class="architecture-flow" aria-label="云枢产品矩阵架构流">
+            <div class="flow-node">
+              <span>01</span>
+              <strong>企业数据源</strong>
+              <p>MySQL、ClickHouse、Oracle、业务库与非结构化文档。</p>
+            </div>
+            <div class="flow-line"></div>
+            <div class="flow-node">
+              <span>02</span>
+              <strong>数据服务化</strong>
+              <p>元数据治理、SQL Lab、API 资源、目录发布与审计。</p>
+            </div>
+            <div class="flow-line"></div>
+            <div class="flow-node">
+              <span>03</span>
+              <strong>智能体执行</strong>
+              <p>ChatBI、Knowledge、MCP、工具调用、任务调度与 Trace。</p>
+            </div>
+            <div class="flow-line"></div>
+            <div class="flow-node">
+              <span>04</span>
+              <strong>运营与渠道</strong>
+              <p>嵌入式聊天、OpenClaw Buddy、飞书/微信/Telegram 等入口。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section split-showcase" aria-label="产品界面展示">
+        <div class="container showcase-grid">
+          <figure class="showcase-image large">
+            <img src="assets/images/data-platform-catalog.png" alt="数据产品目录截图" />
+          </figure>
+          <div class="showcase-copy">
+            <p class="section-kicker">Experience</p>
+            <h2>既能治理，也能让业务用户真正发现和使用数据。</h2>
+            <p>
+              数据产品目录、资产全景、权限申请与审批，让 API 不只是技术接口，而是可以被业务域浏览、
+              申请、追踪和运营的数据产品。
+            </p>
+            <div class="feature-list">
+              <span>业务域目录</span>
+              <span>权限状态</span>
+              <span>调用趋势</span>
+              <span>审计回溯</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="scenarios" aria-labelledby="scenarios-title">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-kicker">Scenarios</p>
+            <h2 id="scenarios-title">高频企业场景，尽量做到开箱即用。</h2>
+          </div>
+          <div class="scenario-grid">
+            <article>
+              <span class="scenario-icon">BI</span>
+              <h3>自然语言查数</h3>
+              <p>基于元数据、Few-Shot 案例、SQL 护栏与自愈链路，支撑企业级 ChatBI。</p>
+            </article>
+            <article>
+              <span class="scenario-icon">API</span>
+              <h3>数据产品发布</h3>
+              <p>把资源 API 包装为可发现、可申请、可审计的数据产品目录。</p>
+            </article>
+            <article>
+              <span class="scenario-icon">RAG</span>
+              <h3>知识增强问答</h3>
+              <p>面向非结构化文档的知识库管理、召回测试、引用注入与回答拦截。</p>
+            </article>
+            <article>
+              <span class="scenario-icon">MCP</span>
+              <h3>工具生态连接</h3>
+              <p>通过 MCP 与外部系统、插件、生产力工具连接，减少核心代码侵入。</p>
+            </article>
+            <article>
+              <span class="scenario-icon">SDK</span>
+              <h3>业务系统嵌入</h3>
+              <p>Embed Chat SDK 对接现有鉴权与租户体系，把智能体嵌到业务流程里。</p>
+            </article>
+            <article>
+              <span class="scenario-icon">OPS</span>
+              <h3>Agent 运营工作台</h3>
+              <p>OpenClaw Buddy 提供 Bot、模型、渠道、Workspace 与 Console 的可视化管理。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section delivery-section" id="delivery" aria-labelledby="delivery-title">
+        <div class="container delivery-grid">
+          <div>
+            <p class="section-kicker">Delivery</p>
+            <h2 id="delivery-title">面向私有化、可审计和可持续演进的交付方式。</h2>
+            <p>
+              三个项目都围绕企业内网、权限体系、多源数据和运维闭环设计，适合按模块分阶段落地：
+              先建数据服务底座，再接入智能体执行，最后补齐多渠道 Agent 运营入口。
+            </p>
+          </div>
+          <div class="delivery-points">
+            <div>
+              <strong>私有化部署</strong>
+              <span>Docker 打包、环境变量配置、离线部署流程。</span>
+            </div>
+            <div>
+              <strong>安全与权限</strong>
+              <span>RBAC、租户隔离、审计、脱敏、API Key 与会话鉴权。</span>
+            </div>
+            <div>
+              <strong>可观测与追踪</strong>
+              <span>调用统计、Trace 时间线、健康监控、日志与自愈事件。</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <strong>云枢产品矩阵</strong>
+          <p>Connect Data. Orchestrate Intelligence. Operate Agents.</p>
+        </div>
+        <a href="#top">返回顶部</a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
