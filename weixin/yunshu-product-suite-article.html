@@ -1,0 +1,908 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>云枢产品矩阵：把数据、智能体与运营入口连成一条企业智能化链路</title>
+    <meta
+      name="description"
+      content="云枢产品矩阵公众号文章：介绍云枢数据服务平台、云枢智能体平台与 OpenClaw Buddy 如何组成企业智能化链路。"
+    />
+    <style>
+      :root {
+        --ink: #101827;
+        --muted: #5e6b7d;
+        --soft: #e5ebf3;
+        --paper: #ffffff;
+        --wash: #f4f7fb;
+        --navy: #0f2744;
+        --blue: #1d4ed8;
+        --cyan: #0e7490;
+        --green: #15803d;
+        --amber: #b45309;
+        --red: #be123c;
+        --radius: 8px;
+        --shadow: 0 24px 70px rgba(15, 23, 42, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        background:
+          linear-gradient(180deg, #eef4fb 0, #f7f9fc 360px, #ffffff 900px),
+          var(--paper);
+        color: var(--ink);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          "PingFang SC", "Microsoft YaHei", sans-serif;
+        line-height: 1.78;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      .article-shell {
+        width: min(920px, calc(100vw - 32px));
+        margin: 0 auto;
+      }
+
+      .hero {
+        position: relative;
+        min-height: 680px;
+        padding: 56px 0 38px;
+        overflow: hidden;
+        color: #f8fafc;
+        background: #09111f;
+      }
+
+      .hero::after {
+        position: absolute;
+        inset: 0;
+        content: "";
+        background:
+          linear-gradient(90deg, rgba(7, 13, 24, 0.92), rgba(7, 13, 24, 0.7) 50%, rgba(7, 13, 24, 0.48)),
+          linear-gradient(180deg, rgba(7, 13, 24, 0.28), rgba(7, 13, 24, 0.86));
+        z-index: 1;
+      }
+
+      .hero img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.58;
+      }
+
+      .hero-inner {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        min-height: 586px;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .brand-line {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        color: rgba(248, 250, 252, 0.82);
+        font-size: 14px;
+      }
+
+      .brand-mark {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 800;
+      }
+
+      .brand-mark span {
+        display: grid;
+        width: 36px;
+        height: 36px;
+        place-items: center;
+        border: 1px solid rgba(248, 250, 252, 0.75);
+        border-radius: var(--radius);
+      }
+
+      .hero-content {
+        max-width: 780px;
+        padding: 58px 0 34px;
+      }
+
+      .eyebrow {
+        margin: 0 0 18px;
+        color: #7dd3fc;
+        font-size: 12px;
+        font-weight: 900;
+        letter-spacing: 0;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(44px, 7.8vw, 76px);
+        line-height: 1.02;
+        letter-spacing: 0;
+      }
+
+      .hero-lead {
+        max-width: 680px;
+        margin: 28px 0 0;
+        color: rgba(248, 250, 252, 0.84);
+        font-size: clamp(18px, 2.4vw, 24px);
+        line-height: 1.72;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 34px;
+      }
+
+      .button {
+        display: inline-flex;
+        min-height: 44px;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 11px 16px;
+        border-radius: var(--radius);
+        border: 1px solid rgba(248, 250, 252, 0.34);
+        color: #f8fafc;
+        font-size: 14px;
+        font-weight: 800;
+      }
+
+      .button.primary {
+        background: #f8fafc;
+        color: #0f172a;
+      }
+
+      .hero-pills {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+      }
+
+      .hero-pill {
+        min-height: 92px;
+        padding: 18px;
+        border: 1px solid rgba(248, 250, 252, 0.18);
+        border-radius: var(--radius);
+        background: rgba(15, 23, 42, 0.42);
+        backdrop-filter: blur(14px);
+      }
+
+      .hero-pill strong {
+        display: block;
+        color: #ffffff;
+        font-size: 16px;
+      }
+
+      .hero-pill span {
+        display: block;
+        margin-top: 4px;
+        color: rgba(248, 250, 252, 0.7);
+        font-size: 13px;
+      }
+
+      main {
+        padding: 48px 0 72px;
+      }
+
+      .article-card {
+        margin-top: -108px;
+        position: relative;
+        z-index: 3;
+        padding: clamp(26px, 5vw, 52px);
+        border: 1px solid rgba(226, 232, 240, 0.92);
+        border-radius: var(--radius);
+        background: rgba(255, 255, 255, 0.96);
+        box-shadow: var(--shadow);
+      }
+
+      .meta-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 28px;
+      }
+
+      .tag {
+        display: inline-flex;
+        align-items: center;
+        min-height: 30px;
+        padding: 5px 10px;
+        border: 1px solid var(--soft);
+        border-radius: 999px;
+        background: #f8fafc;
+        color: #314154;
+        font-size: 13px;
+        font-weight: 700;
+      }
+
+      .lead-box {
+        margin: 0 0 42px;
+        padding: 24px;
+        border-left: 5px solid var(--blue);
+        border-radius: var(--radius);
+        background: #f4f8ff;
+      }
+
+      .lead-box p {
+        margin: 0;
+        color: #243448;
+        font-size: 18px;
+        line-height: 1.86;
+      }
+
+      section {
+        margin-top: 58px;
+      }
+
+      .section-heading {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 16px;
+        align-items: start;
+        margin-bottom: 22px;
+      }
+
+      .section-index {
+        display: grid;
+        width: 42px;
+        height: 42px;
+        place-items: center;
+        border-radius: var(--radius);
+        background: #10233f;
+        color: #ffffff;
+        font-size: 14px;
+        font-weight: 900;
+      }
+
+      h2 {
+        margin: 0;
+        color: #102033;
+        font-size: clamp(26px, 4vw, 36px);
+        line-height: 1.22;
+        letter-spacing: 0;
+      }
+
+      h3 {
+        margin: 0 0 10px;
+        color: #102033;
+        font-size: 21px;
+        line-height: 1.35;
+      }
+
+      p {
+        margin: 16px 0 0;
+        color: #344255;
+        font-size: 17px;
+      }
+
+      .article-card strong {
+        color: #0f172a;
+      }
+
+      .matrix {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+        margin: 26px 0 6px;
+      }
+
+      .matrix-card,
+      .product-card,
+      .scenario-card,
+      .step-card {
+        border: 1px solid var(--soft);
+        border-radius: var(--radius);
+        background: #ffffff;
+      }
+
+      .matrix-card {
+        min-height: 170px;
+        padding: 20px;
+      }
+
+      .matrix-card .num,
+      .product-card .num {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        margin-bottom: 14px;
+        border-radius: 999px;
+        background: #edf4ff;
+        color: var(--blue);
+        font-size: 13px;
+        font-weight: 900;
+      }
+
+      .matrix-card:nth-child(2) .num,
+      .product-card.agent .num {
+        background: #ecfeff;
+        color: var(--cyan);
+      }
+
+      .matrix-card:nth-child(3) .num,
+      .product-card.buddy .num {
+        background: #f0fdf4;
+        color: var(--green);
+      }
+
+      .matrix-card p,
+      .product-card p,
+      .scenario-card p,
+      .step-card p {
+        margin-top: 8px;
+        color: var(--muted);
+        font-size: 15px;
+        line-height: 1.72;
+      }
+
+      .feature-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin: 24px 0 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .feature-list li {
+        padding: 13px 14px;
+        border: 1px solid var(--soft);
+        border-radius: var(--radius);
+        background: #fbfdff;
+        color: #344255;
+        font-size: 15px;
+      }
+
+      .feature-list b {
+        color: #0f172a;
+      }
+
+      .image-panel {
+        margin: 28px 0 0;
+        overflow: hidden;
+        border: 1px solid var(--soft);
+        border-radius: var(--radius);
+        background: #0f172a;
+      }
+
+      .image-panel img {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+      }
+
+      .image-panel figcaption {
+        padding: 12px 16px;
+        color: rgba(248, 250, 252, 0.76);
+        font-size: 13px;
+      }
+
+      .product-grid {
+        display: grid;
+        gap: 16px;
+        margin-top: 28px;
+      }
+
+      .product-card {
+        display: grid;
+        grid-template-columns: 1fr 220px;
+        gap: 20px;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .product-card img {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        border-radius: var(--radius);
+        object-fit: cover;
+        border: 1px solid var(--soft);
+      }
+
+      .quote-band {
+        margin: 38px 0 0;
+        padding: 28px;
+        border-radius: var(--radius);
+        background: #10233f;
+        color: #f8fafc;
+      }
+
+      .quote-band p {
+        margin: 0;
+        color: rgba(248, 250, 252, 0.88);
+        font-size: 20px;
+        line-height: 1.75;
+      }
+
+      .flow {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        margin-top: 26px;
+      }
+
+      .flow-item {
+        position: relative;
+        min-height: 132px;
+        padding: 18px;
+        border-radius: var(--radius);
+        background: #f8fafc;
+        border: 1px solid var(--soft);
+      }
+
+      .flow-item strong {
+        display: block;
+        color: #102033;
+      }
+
+      .flow-item span {
+        display: block;
+        margin-top: 8px;
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.62;
+      }
+
+      .scenario-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+        margin-top: 26px;
+      }
+
+      .scenario-card {
+        padding: 18px;
+      }
+
+      .scenario-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 44px;
+        height: 30px;
+        margin-bottom: 12px;
+        border-radius: 999px;
+        background: #eff6ff;
+        color: var(--blue);
+        font-size: 12px;
+        font-weight: 900;
+      }
+
+      .scenario-card:nth-child(2n) .scenario-icon {
+        background: #ecfeff;
+        color: var(--cyan);
+      }
+
+      .scenario-card:nth-child(3n) .scenario-icon {
+        background: #f0fdf4;
+        color: var(--green);
+      }
+
+      .scenario-card:nth-child(5n) .scenario-icon {
+        background: #fff7ed;
+        color: var(--amber);
+      }
+
+      .steps {
+        display: grid;
+        gap: 12px;
+        margin-top: 26px;
+      }
+
+      .step-card {
+        display: grid;
+        grid-template-columns: 68px 1fr;
+        gap: 18px;
+        align-items: start;
+        padding: 18px;
+      }
+
+      .step-card .step-num {
+        display: grid;
+        width: 52px;
+        height: 52px;
+        place-items: center;
+        border-radius: var(--radius);
+        background: #f8fafc;
+        color: #10233f;
+        font-weight: 900;
+      }
+
+      .cta {
+        margin-top: 64px;
+        padding: clamp(26px, 5vw, 42px);
+        border-radius: var(--radius);
+        background: #10233f;
+        color: #f8fafc;
+      }
+
+      .cta h2 {
+        color: #ffffff;
+      }
+
+      .cta p {
+        color: rgba(248, 250, 252, 0.82);
+      }
+
+      .cta-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 24px;
+      }
+
+      .cta-links a {
+        display: inline-flex;
+        min-height: 42px;
+        align-items: center;
+        padding: 9px 14px;
+        border: 1px solid rgba(248, 250, 252, 0.24);
+        border-radius: var(--radius);
+        background: rgba(255, 255, 255, 0.08);
+        color: #ffffff;
+        font-size: 14px;
+        font-weight: 800;
+      }
+
+      .footer-note {
+        width: min(920px, calc(100vw - 32px));
+        margin: 24px auto 0;
+        color: #7c8797;
+        font-size: 13px;
+        text-align: center;
+      }
+
+      @media (max-width: 760px) {
+        .hero {
+          min-height: 760px;
+          padding-top: 34px;
+        }
+
+        .hero-inner {
+          min-height: 690px;
+        }
+
+        .brand-line {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+
+        .hero-pills,
+        .matrix,
+        .feature-list,
+        .flow,
+        .scenario-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .article-card {
+          margin-top: -76px;
+          padding: 24px 18px;
+        }
+
+        .section-heading {
+          grid-template-columns: 1fr;
+          gap: 12px;
+        }
+
+        .product-card {
+          grid-template-columns: 1fr;
+        }
+
+        .product-card img {
+          order: -1;
+        }
+
+        .step-card {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <img src="../assets/images/generated-product-suite-hero.png" alt="云枢产品矩阵产品概念图" />
+      <div class="article-shell hero-inner">
+        <div class="brand-line">
+          <div class="brand-mark"><span>枢</span>云枢产品矩阵</div>
+          <div>Data, Agents, Operations</div>
+        </div>
+        <div class="hero-content">
+          <p class="eyebrow">Enterprise Data & Agent Platform</p>
+          <h1>把数据、智能体与运营入口连成一条企业智能化链路</h1>
+          <p class="hero-lead">
+            云枢产品矩阵以数据服务平台作为治理底座，以智能体平台承接推理、工具与业务执行，再用
+            OpenClaw Buddy 降低多渠道 AI Agent 的运营门槛。
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="https://randychen1985.github.io/yunshu/">访问官网</a>
+            <a class="button" href="mailto:cexlong@gmail.com">联系交流</a>
+          </div>
+        </div>
+        <div class="hero-pills" aria-label="云枢产品三层矩阵">
+          <div class="hero-pill">
+            <strong>Data</strong>
+            <span>数据服务化与治理</span>
+          </div>
+          <div class="hero-pill">
+            <strong>Agent</strong>
+            <span>智能体编排与执行</span>
+          </div>
+          <div class="hero-pill">
+            <strong>Buddy</strong>
+            <span>OpenClaw 可视化伴侣</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <article class="article-shell article-card">
+        <div class="meta-row">
+          <span class="tag">云枢产品矩阵</span>
+          <span class="tag">Data API</span>
+          <span class="tag">ChatBI</span>
+          <span class="tag">OpenClaw Buddy</span>
+        </div>
+
+        <div class="lead-box">
+          <p>
+            很多企业在推进 AI 应用时，会遇到一个很现实的问题：模型能力越来越强，但真正落到业务里，仍然绕不开数据、权限、工具、系统集成和日常运营。
+          </p>
+        </div>
+
+        <p>
+          业务人员希望用自然语言查数、问知识、跑流程；技术团队希望数据访问可审计、SQL 可控、接口可治理；运营人员又希望
+          Agent 能接入微信、飞书、Telegram 等渠道，并且可以稳定地配置、监控和维护。
+        </p>
+        <p>
+          如果这些能力分散在不同系统里，AI 很容易停留在“能聊”的阶段，很难进入“能用、可管、可持续演进”的阶段。
+        </p>
+        <p>
+          这也是我做 <strong>云枢产品矩阵</strong> 的出发点：把企业数据、AI 智能体执行和 Agent
+          运营入口放在同一条产品线上，让数据可以被治理，让智能体可以执行，让 Agent 可以被运营。
+        </p>
+
+        <section>
+          <div class="section-heading">
+            <span class="section-index">01</span>
+            <h2>云枢不是三个孤立项目，而是一条产品链路</h2>
+          </div>
+          <p>
+            云枢产品矩阵目前包含三层：云枢 · 数据服务平台、云枢 · 智能体平台、OpenClaw Buddy。它们分别覆盖企业智能化链路中的数据供给、智能执行和运营入口。
+          </p>
+          <div class="matrix">
+            <div class="matrix-card">
+              <span class="num">01</span>
+              <h3>云枢 · 数据服务平台</h3>
+              <p>把物理表、SQL、元数据和 API 治理起来，让数据成为可发现、可授权、可审计的数据产品。</p>
+            </div>
+            <div class="matrix-card">
+              <span class="num">02</span>
+              <h3>云枢 · 智能体平台</h3>
+              <p>承接对话、查数、知识、MCP 工具调用和业务执行，让 AI 从聊天进入真实工作流。</p>
+            </div>
+            <div class="matrix-card">
+              <span class="num">03</span>
+              <h3>OpenClaw Buddy</h3>
+              <p>把开放式 Agent 网关变成非技术人员也能配置、协作、观察和运营的 Web 工作台。</p>
+            </div>
+          </div>
+          <div class="quote-band">
+            <p>
+              云枢想做的不是“再做一个聊天框”，而是把 AI 真正接到企业的数据资产、权限体系、业务系统和运营入口里。
+            </p>
+          </div>
+        </section>
+
+        <section>
+          <div class="section-heading">
+            <span class="section-index">02</span>
+            <h2>云枢 · 数据服务平台：让数据先变成可运营资产</h2>
+          </div>
+          <p>
+            企业里很多数据并不是不能用，而是“不好被安全、稳定、低成本地使用”。数据可能散落在 MySQL、ClickHouse、Oracle、业务库和数仓里；字段含义依赖口口相传；临时
+            SQL 越写越多；接口权限、调用审计和生命周期管理也经常缺位。
+          </p>
+          <p>
+            <strong>云枢 · 数据服务平台</strong> 把物理表、自定义 SQL 与语义元数据封装为可治理、可审计、可观测的数据产品和
+            RESTful API，让数据不只是数据库里的表，而是可以被发现、申请、授权、调用和持续运营的产品。
+          </p>
+          <ul class="feature-list">
+            <li><b>资源服务化</b>：TABLE 零代码映射与 SQL 模板封装</li>
+            <li><b>SQL Lab</b>：在线编写、调试、AI 辅助生成与修复 SQL</li>
+            <li><b>元数据治理</b>：统一管理数据源、表、字段、指标和关系</li>
+            <li><b>数据产品目录</b>：按业务域浏览、申请、审批和运营数据产品</li>
+            <li><b>安全审计</b>：API Key、Session、RBAC、数据脱敏与 SQL 护栏</li>
+            <li><b>全链路观测</b>：调用趋势、Top 排行、分钟级统计和健康状态</li>
+          </ul>
+          <figure class="image-panel">
+            <img src="../assets/images/data-catalog.png" alt="云枢数据服务平台数据产品目录界面" />
+            <figcaption>云枢 · 数据服务平台：从数据源、SQL Lab 到数据产品目录，形成可运营的数据服务底座。</figcaption>
+          </figure>
+        </section>
+
+        <section>
+          <div class="section-heading">
+            <span class="section-index">03</span>
+            <h2>云枢 · 智能体平台：把 AI 从聊天推进到业务执行</h2>
+          </div>
+          <p>
+            有了数据底座之后，下一步是让 AI 能理解问题、选择能力、调用工具，并把结果以可追踪的方式返回给业务用户。这就是
+            <strong>云枢 · 智能体平台</strong> 要解决的事情。
+          </p>
+          <p>
+            它面向企业复杂场景，提供多专家路由、AgentScope ReAct 执行、ChatBI、知识库、MCP 工具生态、Embed Chat SDK 和全链路 Trace。
+          </p>
+          <div class="flow" aria-label="智能体执行链路">
+            <div class="flow-item">
+              <strong>入口接入</strong>
+              <span>管理后台、业务系统、数据门户或嵌入式 SDK 发起对话。</span>
+            </div>
+            <div class="flow-item">
+              <strong>意图路由</strong>
+              <span>自动识别任务，由 Assistant、ChatBI、Knowledge 等专家承接。</span>
+            </div>
+            <div class="flow-item">
+              <strong>工具执行</strong>
+              <span>调用数据查询、知识检索、MCP 工具或 OpenClaw 网关。</span>
+            </div>
+            <div class="flow-item">
+              <strong>过程追踪</strong>
+              <span>Trace 时间线记录执行过程，便于调试、审计和复盘。</span>
+            </div>
+          </div>
+          <p>
+            其中，企业级 ChatBI 是非常重要的一块能力。它不是简单的 Text-to-SQL Demo，而是围绕真实企业环境补齐了元数据注入、Few-Shot 案例、SQL
+            自愈、SQL 安全护栏、数据门户和执行追踪。
+          </p>
+          <figure class="image-panel">
+            <img src="../assets/images/agent-ai-chat.png" alt="云枢智能体平台对话界面" />
+            <figcaption>云枢 · 智能体平台：把对话、查数、知识增强、工具执行和 Trace 放进一个可控运行时。</figcaption>
+          </figure>
+        </section>
+
+        <section>
+          <div class="section-heading">
+            <span class="section-index">04</span>
+            <h2>OpenClaw Buddy：让 Agent 真正可配置、可协作、可运营</h2>
+          </div>
+          <p>
+            企业 AI 应用走到后期，另一个问题会变得越来越明显：Agent 不只是开发者命令行里的一个进程，它需要被更多角色配置、使用、观察和维护。
+          </p>
+          <p>
+            <strong>OpenClaw Buddy</strong> 是为 OpenClaw 打造的 Web 管理台与对话伴侣。它把 Bot、模型、Skills、渠道、Workspace、Console、自愈和审计放到统一界面里，让 OpenClaw 从命令行工具变成可运营的 Web 工作台。
+          </p>
+          <ul class="feature-list">
+            <li><b>Chat V3 工作台</b>：多会话、文件、Skills、Console 和诊断同屏协作</li>
+            <li><b>Workspace 文件</b>：按 Bot 感知专属工作区，支持浏览、编辑和上传</li>
+            <li><b>Console 终端</b>：基于 WebSocket 的远程终端定位到当前工作区</li>
+            <li><b>Bot / Model 管理</b>：管理 Bot、专家模板、模型渠道和默认模型</li>
+            <li><b>渠道与插件</b>：可视化管理 Skills、微信、飞书、Telegram、QQ Bot</li>
+            <li><b>守护与自愈</b>：心跳探针、备份回滚、审计大屏、系统指标和告警</li>
+          </ul>
+          <figure class="image-panel">
+            <img src="../assets/images/buddy-chat-v3-premium.png" alt="OpenClaw Buddy Chat V3 工作台界面" />
+            <figcaption>OpenClaw Buddy：让非技术人员也能配置、使用、观察和运营多渠道 Agent。</figcaption>
+          </figure>
+        </section>
+
+        <section>
+          <div class="section-heading">
+            <span class="section-index">05</span>
+            <h2>典型落地场景：从查数到嵌入，再到多渠道运营</h2>
+          </div>
+          <div class="scenario-grid">
+            <div class="scenario-card">
+              <span class="scenario-icon">BI</span>
+              <h3>自然语言查数</h3>
+              <p>业务人员用自然语言查询指标、拆解趋势，结合元数据、权限、SQL 安全链路和执行 Trace。</p>
+            </div>
+            <div class="scenario-card">
+              <span class="scenario-icon">API</span>
+              <h3>数据产品化</h3>
+              <p>把表、SQL 与接口封装成可发现、可申请、可审计的数据产品，形成统一服务目录。</p>
+            </div>
+            <div class="scenario-card">
+              <span class="scenario-icon">RAG</span>
+              <h3>知识与数据增强</h3>
+              <p>沉淀企业文档、语义元数据和业务口径，为智能体提供可信上下文与可追溯引用。</p>
+            </div>
+            <div class="scenario-card">
+              <span class="scenario-icon">MCP</span>
+              <h3>工具生态接入</h3>
+              <p>通过 MCP 连接企业系统、插件与生产力工具，让智能体具备可控的业务执行能力。</p>
+            </div>
+            <div class="scenario-card">
+              <span class="scenario-icon">SDK</span>
+              <h3>业务系统嵌入</h3>
+              <p>通过 Embed Chat SDK 接入现有鉴权、租户与业务流程，把智能体嵌进真实工作场景。</p>
+            </div>
+            <div class="scenario-card">
+              <span class="scenario-icon">OPS</span>
+              <h3>Agent 多渠道运营</h3>
+              <p>通过 OpenClaw Buddy 管理微信、飞书、Telegram 等入口，统一会话、授权、日志和告警。</p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="section-heading">
+            <span class="section-index">06</span>
+            <h2>交付思路：先建数据底座，再接智能执行，最后补运营入口</h2>
+          </div>
+          <p>
+            云枢产品矩阵不是要求一次性全部落地。更适合的方式，是按企业当前阶段分步推进。
+          </p>
+          <div class="steps">
+            <div class="step-card">
+              <div class="step-num">Step 1</div>
+              <div>
+                <h3>先建数据服务底座</h3>
+                <p>梳理数据源、元数据、API 资源和数据产品目录，让数据访问变得规范可控。</p>
+              </div>
+            </div>
+            <div class="step-card">
+              <div class="step-num">Step 2</div>
+              <div>
+                <h3>再接智能体执行</h3>
+                <p>让 ChatBI、知识问答、MCP 工具调用和业务系统嵌入逐步进入真实场景。</p>
+              </div>
+            </div>
+            <div class="step-card">
+              <div class="step-num">Step 3</div>
+              <div>
+                <h3>最后补齐运营入口</h3>
+                <p>当 Agent 被更多角色和渠道使用时，补齐 Bot 管理、渠道插件、工作区协作和运行守护。</p>
+              </div>
+            </div>
+          </div>
+          <p>
+            这条路线的核心，是让 AI 应用从“单点体验”走向“企业级系统能力”。不是只看模型回答得漂不漂亮，而是看它能不能接上真实数据，能不能遵守权限，能不能调用工具，能不能被追踪，能不能交给业务和运营团队长期使用。
+          </p>
+        </section>
+
+        <section class="cta">
+          <h2>Connect Data. Orchestrate Intelligence. Operate Agents.</h2>
+          <p>
+            真正有价值的 AI 系统，需要能够连接数据、编排执行、进入业务流程，并且在日常运营中保持可控、可观测、可演进。
+          </p>
+          <p>
+            如果你对云枢数据服务平台、智能体平台或 OpenClaw Buddy 感兴趣，欢迎访问官网了解更多，也可以直接交流部署、产品设计或企业智能体落地场景。
+          </p>
+          <div class="cta-links">
+            <a href="https://randychen1985.github.io/yunshu/">官网：randychen1985.github.io/yunshu</a>
+            <a href="mailto:cexlong@gmail.com">邮箱：cexlong@gmail.com</a>
+          </div>
+        </section>
+      </article>
+      <p class="footer-note">云枢产品矩阵 | Data, Agents, Operations</p>
+    </main>
+  </body>
+</html>
